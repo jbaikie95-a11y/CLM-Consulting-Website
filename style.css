@@ -18,9 +18,22 @@
 /* LOGO */
 
 .logo-img {
-    height: 60px;
+    height: 250px;
     width: auto;
     display: block;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.nav-links {
+    margin-left: auto;
 }
 
 /* RESET */
@@ -64,7 +77,8 @@ a {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: #fff;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(5px);
     border-bottom: 1px solid var(--border);
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
@@ -98,15 +112,16 @@ a {
 }
 
 .cta-btn {
-    background: var(--accent);
+    background: #c7b07c;
     color: white;
-    padding: 0.9rem 1.4rem;
-    border-radius: 6px;
+    padding: 14px 28px;
+    border-radius: 4px;
     font-weight: 600;
+    transition: all 0.2s ease;
 }
 
 .cta-btn:hover {
-    background: var(--accent-dark);
+    background: #b49a62;
 }
 
 /* HERO */
