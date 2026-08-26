@@ -188,7 +188,7 @@ a {
 /* SECTIONS */
 
 .section {
-    padding: 90px 0;
+    padding: 120px 0 90px;
 }
 
 .section-alt {
@@ -257,7 +257,7 @@ a {
 
 .about-split {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1.2fr 0.8fr;
     gap: 120px;
 
     max-width: 1300px;
@@ -267,13 +267,13 @@ a {
 .about-right {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
 }
 
 .feature-row {
     border-bottom: 1px solid #dddddd;
 
-    padding: 22px 0;
+    padding: 14px 0;
 }
 
 .feature-row h4 {
@@ -304,6 +304,11 @@ a {
     color: #666;
 }
 
+.feature-row p {
+    margin-top: 4px;
+    line-height: 1.5;
+}
+
 .about-left h2 {
     font-size: 3rem;
     line-height: 1.1;
@@ -320,12 +325,13 @@ a {
 
 .about-left .cta-btn {
     display: inline-block;
-    margin-top: 25px;
+    margin-top: 20px;
     background: #c7b07c;
     color: white;
-    padding: 15px 32px;
-    border-radius: 0;
+    padding: 14px 30px;
+    text-decoration: none;
     font-weight: 600;
+    border-radius: 0;
 }
 
 /* CTA SECTION */
