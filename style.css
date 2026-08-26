@@ -222,6 +222,11 @@ a {
     color: var(--primary);
 }
 
+/* Ensure card headings stay visible even inside dark sections like why-section */
+.why-section .card h3 {
+    color: var(--primary);
+}
+
 /* SPLIT FEATURE */
 .about-section {
     margin-top: 0px;
@@ -380,13 +385,6 @@ a {
     opacity: 0.7;
 }
 
-.logo {
-    font-weight: 700;
-    font-size: 1.4rem;
-    color: var(--primary);
-    margin-right: auto;
-}
-
 /* UTILITY */
 .centre-button {
     text-align: center;
@@ -400,6 +398,44 @@ a {
     padding: 0.9rem 1.5rem;
     border-radius: 6px;
     font-weight: 600;
+}
+
+/* CONTACT FORM */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 1.5rem;
+}
+
+.contact-form label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--primary);
+    margin-top: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.contact-form button {
+    align-self: flex-start;
+    margin-top: 1.5rem;
+    border: none;
+    cursor: pointer;
 }
 
 /* MOBILE */
