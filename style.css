@@ -255,46 +255,42 @@ a {
 
 /*Split Feature */
 
+.about-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
 .about-split {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 120px;
-
-    max-width: 1300px;
-    margin: 0 auto;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 90px;
+    align-items: center;
 }
 
 .about-right {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
 .feature-row {
     border-bottom: 1px solid #dddddd;
-
-    padding: 14px 0;
+    padding: 8px 0;
 }
 
 .feature-row h4 {
     font-size: 1rem;
     font-weight: 700;
-
     margin-bottom: 8px;
-
     color: #111;
 }
 
 .feature-row h4::before {
     content: "";
-
     display: inline-block;
-
     width: 18px;
     height: 2px;
-
     background: var(--accent);
-
     margin-right: 12px;
     margin-bottom: 4px;
 }
@@ -321,6 +317,7 @@ a {
     font-size: 1.1rem;
     line-height: 1.9;
     color: #666;
+    padding-top: 25px
 }
 
 .about-left .cta-btn {
