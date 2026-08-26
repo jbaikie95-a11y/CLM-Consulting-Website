@@ -257,9 +257,11 @@ a {
 
 .about-split {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: start;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 120px;
+
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 .about-right {
@@ -269,29 +271,61 @@ a {
 }
 
 .feature-row {
-    padding-bottom: 20px;
     border-bottom: 1px solid #dddddd;
+
+    padding: 22px 0;
 }
 
 .feature-row h4 {
-    color: #222;
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 1rem;
     font-weight: 700;
+
+    margin-bottom: 8px;
+
+    color: #111;
+}
+
+.feature-row h4::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 18px;
+    height: 2px;
+
+    background: var(--accent);
+
+    margin-right: 12px;
+    margin-bottom: 4px;
 }
 
 .feature-row p {
+    font-size: 0.95rem;
     color: #666;
-    margin: 0;
+}
+
+.about-left h2 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 30px;
+
+    color: #111;
 }
 
 .about-left p {
-    margin-bottom: 25px;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #666;
 }
 
 .about-left .cta-btn {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 25px;
+    background: #c7b07c;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 0;
+    font-weight: 600;
 }
 
 /* CTA SECTION */
