@@ -11,6 +11,7 @@ CLM CONSULTING STYLES
 --background: #ffffff;
 --background-alt: #f4f5f6;
 --border: #d8dde2;
+--border-strong: #c3c9ce;
 --max-width: 1200px;
 }
 
@@ -95,6 +96,10 @@ font-weight: 600;
 color: var(--accent);
 }
 
+.nav-links a.active {
+color: var(--accent);
+}
+
 .cta-btn {
 background: #c7b07c;
 color: white;
@@ -108,7 +113,7 @@ transition: all 0.2s ease;
 background: var(--accent-dark);
 }
 
-/* HERO */
+/* HERO (home page only — photo background) */
 .hero {
 background-image:
 linear-gradient(
@@ -190,7 +195,7 @@ max-width: 800px;
 margin-bottom: 2rem;
 }
 
-/* SERVICE CARDS (Our Services section — unchanged, numbered white cards) */
+/* SERVICE CARDS (Home page "Our Services" section — numbered white cards) */
 .services-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
@@ -316,7 +321,7 @@ font-weight: 600;
 border-radius: 0;
 }
 
-/* WHY SECTION — dark blue background, no card boxes.
+/* WHY SECTION (Home page) — dark blue background, no card boxes.
    2x2 text grid with thin divider lines, gold headings, white copy. */
 .why-section {
 background: var(--primary);
@@ -344,10 +349,6 @@ padding: 0 0 2.5rem 32px;
 margin-bottom: 2.5rem;
 }
 
-.credential:nth-child(2n) {
-/* right column items keep the same left border/indent */
-}
-
 .credential:nth-last-child(-n+2) {
 border-bottom: none;
 margin-bottom: 0;
@@ -366,7 +367,7 @@ font-size: 0.97rem;
 max-width: 46ch;
 }
 
-/* CTA SECTION — plain white background with small gold accent line */
+/* CTA SECTION (Home page) — plain white background with small gold accent line */
 .cta-section {
 background: var(--background);
 color: var(--text);
@@ -507,10 +508,191 @@ border: none;
 cursor: pointer;
 }
 
+/* ======================================================
+SERVICES PAGE — expanded panels + solid-colour page header
+====================================================== */
+
+/* Solid blue header replacing the hero photo on the Services page */
+.services-hero {
+background: var(--primary);
+color: white;
+padding: 150px 0 70px;
+}
+
+.services-hero .dash {
+width: 40px;
+height: 1px;
+background: var(--accent);
+margin-bottom: 1.5rem;
+}
+
+.services-hero h1 {
+font-size: clamp(2.2rem, 4vw, 2.9rem);
+margin-bottom: 0.9rem;
+}
+
+.services-hero p {
+max-width: 620px;
+color: rgba(255,255,255,0.88);
+font-size: 1.05rem;
+}
+
+/* Intro copy under the header, on white background */
+.services-intro {
+padding: 90px 0 60px;
+border-bottom: 1px solid var(--border);
+}
+
+.services-intro .dash {
+width: 40px;
+height: 1px;
+background: var(--border-strong);
+margin-bottom: 1.25rem;
+}
+
+.services-intro h2 {
+font-size: clamp(1.5rem, 2.6vw, 1.9rem);
+color: #1a2530;
+margin-bottom: 0.9rem;
+max-width: 720px;
+}
+
+.services-intro p {
+max-width: 720px;
+color: var(--text-light);
+font-size: 1rem;
+}
+
+/* Expanded service panels */
+.services-detail {
+background: var(--background-alt);
+padding: 70px 0 100px;
+}
+
+.service-row {
+display: grid;
+grid-template-columns: 1fr 1.4fr;
+background: white;
+border: 1px solid var(--border);
+margin-bottom: 1.75rem;
+}
+
+.service-row:last-child {
+margin-bottom: 0;
+}
+
+.service-info {
+padding: 2.75rem 2.5rem;
+}
+
+.service-info .service-num {
+margin-bottom: 0.9rem;
+}
+
+.service-info h3 {
+font-size: 1.4rem;
+color: #1a2530;
+margin-bottom: 0.4rem;
+}
+
+.service-subtitle {
+display: block;
+font-size: 0.92rem;
+color: var(--accent-dark);
+margin-bottom: 1.1rem;
+}
+
+.service-info p.service-desc {
+color: var(--text-light);
+font-size: 0.95rem;
+line-height: 1.75;
+margin-bottom: 0;
+}
+
+.service-scope {
+padding: 2.75rem 2.5rem;
+border-left: 1px solid var(--border);
+}
+
+.scope-label {
+font-family: "Consolas", "Courier New", monospace;
+font-size: 0.72rem;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: var(--text-light);
+margin-bottom: 1.25rem;
+display: block;
+}
+
+.scope-list {
+list-style: none;
+display: flex;
+flex-direction: column;
+gap: 0.85rem;
+}
+
+.scope-list li {
+display: flex;
+align-items: baseline;
+gap: 14px;
+font-size: 0.93rem;
+color: var(--text);
+}
+
+.scope-list li::before {
+content: '';
+flex: 0 0 auto;
+width: 14px;
+height: 1px;
+background: var(--accent);
+transform: translateY(-4px);
+}
+
+/* Closing CTA on the Services page — kept as a dark, centred band
+   (distinct from the homepage's white "Ready to Discuss" section) */
+.discuss-cta {
+background: var(--primary);
+color: white;
+text-align: center;
+padding: 90px 0;
+}
+
+.discuss-cta .dash {
+width: 40px;
+height: 1px;
+background: var(--accent);
+margin: 0 auto 1.5rem;
+}
+
+.discuss-cta h2 {
+margin-bottom: 1rem;
+font-size: clamp(1.7rem, 3vw, 2.2rem);
+}
+
+.discuss-cta p {
+max-width: 640px;
+margin: 0 auto 2rem;
+color: rgba(255,255,255,0.85);
+}
+
+.discuss-cta .cta-btn {
+display: inline-block;
+}
+
 /* MOBILE */
 @media (max-width: 900px) {
 .services-grid {
 grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media (max-width: 860px) {
+.service-row {
+grid-template-columns: 1fr;
+}
+.service-scope {
+border-left: none;
+border-top: 1px solid var(--border);
 }
 }
 

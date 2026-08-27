@@ -190,7 +190,18 @@ max-width: 800px;
 margin-bottom: 2rem;
 }
 
-/* SERVICE CARDS (Our Services section — unchanged, numbered white cards) */
+/* CARDS */
+/* Why Clients Choose CLM — matched to the numbered, spacious card style
+   used on the newer CLM site build */
+.credentials-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 1.75rem;
+margin-top: 2.5rem;
+}
+
+/* Services cards — matched to the numbered, spacious card style
+   used on the newer CLM site build */
 .services-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
@@ -242,6 +253,20 @@ color: #1a2530;
 .card p {
 color: var(--text-light);
 font-size: 0.97rem;
+}
+
+/* Cards inside the dark "Why Clients Choose CLM" section keep the same
+   white card look, with brand-blue headings and muted body copy */
+.why-section .card {
+background: white;
+}
+
+.why-section .card h3 {
+color: var(--primary);
+}
+
+.why-section .card p {
+color: var(--text-light);
 }
 
 /* SPLIT FEATURE */
@@ -316,57 +341,19 @@ font-weight: 600;
 border-radius: 0;
 }
 
-/* WHY SECTION — dark blue background, no card boxes.
-   2x2 text grid with thin divider lines, gold headings, white copy. */
+/* WHY SECTION (dark blue background, white cards) */
 .why-section {
 background: var(--primary);
 color: white;
-padding: 100px 0 110px;
+padding: 100px 0;
 }
 
 .why-section h2 {
 color: white;
 }
 
-.credentials-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: auto auto;
-column-gap: 60px;
-row-gap: 0;
-margin-top: 3rem;
-}
-
-.credential {
-border-left: 1px solid rgba(255,255,255,0.35);
-border-bottom: 1px solid rgba(255,255,255,0.2);
-padding: 0 0 2.5rem 32px;
-margin-bottom: 2.5rem;
-}
-
-.credential:nth-child(2n) {
-/* right column items keep the same left border/indent */
-}
-
-.credential:nth-last-child(-n+2) {
-border-bottom: none;
-margin-bottom: 0;
-padding-bottom: 0;
-}
-
-.credential h3 {
-color: var(--accent);
-font-size: 1.2rem;
-margin-bottom: 0.9rem;
-}
-
-.credential p {
-color: rgba(255,255,255,0.9);
-font-size: 0.97rem;
-max-width: 46ch;
-}
-
-/* CTA SECTION — plain white background with small gold accent line */
+/* CTA SECTION — now on a plain white background, matching the
+   lighter "Ready to Discuss Your Project?" treatment */
 .cta-section {
 background: var(--background);
 color: var(--text);
@@ -509,7 +496,8 @@ cursor: pointer;
 
 /* MOBILE */
 @media (max-width: 900px) {
-.services-grid {
+.services-grid,
+.credentials-grid {
 grid-template-columns: repeat(2, 1fr);
 }
 }
@@ -525,22 +513,11 @@ font-size: 2.5rem;
 .nav-links {
 display: none;
 }
-.credentials-grid {
-grid-template-columns: 1fr;
-row-gap: 0;
-}
-.credential {
-border-left: none;
-border-bottom: 1px solid rgba(255,255,255,0.2);
-padding-left: 0;
-}
-.credential:last-child {
-border-bottom: none;
-}
 }
 
 @media (max-width: 600px) {
-.services-grid {
+.services-grid,
+.credentials-grid {
 grid-template-columns: 1fr;
 }
 }
