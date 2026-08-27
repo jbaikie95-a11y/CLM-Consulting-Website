@@ -11,7 +11,6 @@ CLM CONSULTING STYLES
 --background: #ffffff;
 --background-alt: #f4f5f6;
 --border: #d8dde2;
---border-strong: #c3c9ce;
 --max-width: 1200px;
 }
 
@@ -68,8 +67,8 @@ box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 
 .nav-container {
 display: flex;
-align-items: center;
 justify-content: space-between;
+align-items: center;
 padding: 0.75rem 0;
 }
 
@@ -96,10 +95,6 @@ font-weight: 600;
 color: var(--accent);
 }
 
-.nav-links a.active {
-color: var(--accent);
-}
-
 .cta-btn {
 background: #c7b07c;
 color: white;
@@ -113,7 +108,7 @@ transition: all 0.2s ease;
 background: var(--accent-dark);
 }
 
-/* HERO (home page only — photo background) */
+/* HERO */
 .hero {
 background-image:
 linear-gradient(
@@ -195,7 +190,7 @@ max-width: 800px;
 margin-bottom: 2rem;
 }
 
-/* SERVICE CARDS (Home page "Our Services" section — numbered white cards) */
+/* SERVICE CARDS (Our Services section — unchanged, numbered white cards) */
 .services-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
@@ -249,7 +244,7 @@ color: var(--text-light);
 font-size: 0.97rem;
 }
 
-/* SPLIT FEATURE (home page) */
+/* SPLIT FEATURE */
 .about-section {
 margin-top: 0px;
 }
@@ -321,7 +316,7 @@ font-weight: 600;
 border-radius: 0;
 }
 
-/* WHY SECTION (Home page) — dark blue background, no card boxes.
+/* WHY SECTION — dark blue background, no card boxes.
    2x2 text grid with thin divider lines, gold headings, white copy. */
 .why-section {
 background: var(--primary);
@@ -349,6 +344,10 @@ padding: 0 0 2.5rem 32px;
 margin-bottom: 2.5rem;
 }
 
+.credential:nth-child(2n) {
+/* right column items keep the same left border/indent */
+}
+
 .credential:nth-last-child(-n+2) {
 border-bottom: none;
 margin-bottom: 0;
@@ -367,7 +366,7 @@ font-size: 0.97rem;
 max-width: 46ch;
 }
 
-/* CTA SECTION (Home page) — plain white background with small gold accent line */
+/* CTA SECTION — plain white background with small gold accent line */
 .cta-section {
 background: var(--background);
 color: var(--text);
@@ -417,12 +416,6 @@ color: white;
 height: 2px;
 background: var(--accent);
 opacity: 0.7;
-}
-
-.footer-logo {
-height: 70px;
-width: auto;
-margin-bottom: 1rem;
 }
 
 .footer-grid {
@@ -514,371 +507,10 @@ border: none;
 cursor: pointer;
 }
 
-/* ======================================================
-SERVICES PAGE — expanded panels + solid-colour page header
-====================================================== */
-
-/* Solid blue header replacing the hero photo on the Services page */
-.services-hero {
-background: var(--primary);
-color: white;
-padding: 150px 0 70px;
-}
-
-.services-hero .dash {
-width: 40px;
-height: 1px;
-background: var(--accent);
-margin-bottom: 1.5rem;
-}
-
-.services-hero h1 {
-font-size: clamp(2.2rem, 4vw, 2.9rem);
-margin-bottom: 0.9rem;
-color: white;
-}
-
-.services-hero p {
-max-width: 620px;
-color: rgba(255,255,255,0.88);
-font-size: 1.05rem;
-}
-
-/* Intro copy under the header, on white background */
-.services-intro {
-padding: 90px 0 60px;
-border-bottom: 1px solid var(--border);
-}
-
-.services-intro .dash {
-width: 40px;
-height: 1px;
-background: var(--border-strong);
-margin-bottom: 1.25rem;
-}
-
-.services-intro h2 {
-font-size: clamp(1.5rem, 2.6vw, 1.9rem);
-color: #1a2530;
-margin-bottom: 0.9rem;
-max-width: 720px;
-}
-
-.services-intro p {
-max-width: 720px;
-color: var(--text-light);
-font-size: 1rem;
-}
-
-/* Expanded service panels */
-.services-detail {
-background: var(--background-alt);
-padding: 70px 0 100px;
-}
-
-.service-row {
-display: grid;
-grid-template-columns: 1fr 1.4fr;
-background: white;
-border: 1px solid var(--border);
-margin-bottom: 1.75rem;
-}
-
-.service-row:last-child {
-margin-bottom: 0;
-}
-
-.service-info {
-padding: 2.75rem 2.5rem;
-}
-
-.service-info .service-num {
-margin-bottom: 0.9rem;
-}
-
-.service-info h3 {
-font-size: 1.4rem;
-color: #1a2530;
-margin-bottom: 0.4rem;
-}
-
-.service-subtitle {
-display: block;
-font-size: 0.92rem;
-color: var(--accent-dark);
-margin-bottom: 1.1rem;
-}
-
-.service-info p.service-desc {
-color: var(--text-light);
-font-size: 0.95rem;
-line-height: 1.75;
-margin-bottom: 0;
-}
-
-.service-scope {
-padding: 2.75rem 2.5rem;
-border-left: 1px solid var(--border);
-}
-
-.scope-label {
-font-family: "Consolas", "Courier New", monospace;
-font-size: 0.72rem;
-letter-spacing: 0.1em;
-text-transform: uppercase;
-color: var(--text-light);
-margin-bottom: 1.25rem;
-display: block;
-}
-
-.scope-list {
-list-style: none;
-display: flex;
-flex-direction: column;
-gap: 0.85rem;
-}
-
-.scope-list li {
-display: flex;
-align-items: baseline;
-gap: 14px;
-font-size: 0.93rem;
-color: var(--text);
-}
-
-.scope-list li::before {
-content: '';
-flex: 0 0 auto;
-width: 14px;
-height: 1px;
-background: var(--accent);
-transform: translateY(-4px);
-}
-
-/* Closing CTA on the Services page — kept as a dark, centred band
-   (distinct from the homepage's white "Ready to Discuss" section) */
-.discuss-cta {
-background: var(--primary);
-color: white;
-text-align: center;
-padding: 90px 0;
-}
-
-.discuss-cta .dash {
-width: 40px;
-height: 1px;
-background: var(--accent);
-margin: 0 auto 1.5rem;
-}
-
-.discuss-cta h2 {
-margin-bottom: 1rem;
-font-size: clamp(1.7rem, 3vw, 2.2rem);
-color: white;
-}
-
-.discuss-cta p {
-max-width: 640px;
-margin: 0 auto 2rem;
-color: rgba(255,255,255,0.85);
-}
-
-.discuss-cta .cta-btn {
-display: inline-block;
-}
-
-/* ======================================================
-ABOUT PAGE — blue header bar (no hero photo) + two-column
-info sections, matching the Services page treatment
-====================================================== */
-
-/* Solid blue header replacing the hero photo on the About page */
-.about-hero {
-background: var(--primary);
-color: white;
-padding: 150px 0 70px;
-}
-
-.about-hero .dash {
-width: 40px;
-height: 1px;
-background: var(--accent);
-margin-bottom: 1.5rem;
-}
-
-.about-hero h1 {
-font-size: clamp(2.2rem, 4vw, 2.9rem);
-margin-bottom: 0.9rem;
-color: white;
-}
-
-.about-hero p {
-max-width: 620px;
-color: rgba(255,255,255,0.88);
-font-size: 1.05rem;
-}
-
-/* Two-column info sections (Who We Are / How We Work,
-   Our Expertise / Professional Standards) */
-.about-split-section {
-padding: 90px 0;
-}
-
-.about-split-section.alt {
-background: var(--background-alt);
-}
-
-.two-col-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 80px;
-align-items: start;
-}
-
-.two-col-grid .dash {
-width: 40px;
-height: 1px;
-background: var(--border-strong);
-margin-bottom: 1.25rem;
-}
-
-.two-col-grid h2 {
-font-size: clamp(1.5rem, 2.6vw, 1.9rem);
-color: #1a2530;
-margin-bottom: 1.1rem;
-}
-
-.two-col-grid > div > p {
-color: var(--text-light);
-font-size: 0.97rem;
-margin-bottom: 1rem;
-}
-
-.two-col-grid > div > p:last-of-type {
-margin-bottom: 0;
-}
-
-/* Divider list used for "How We Work" and "Professional Standards"
-   — heading + short description per row */
-.info-list {
-list-style: none;
-margin-top: 1.75rem;
-}
-
-.info-list li {
-position: relative;
-padding: 1.1rem 0 1.1rem 26px;
-border-bottom: 1px solid var(--border);
-}
-
-.info-list li:first-child {
-padding-top: 0;
-}
-
-.info-list li:last-child {
-border-bottom: none;
-padding-bottom: 0;
-}
-
-.info-list li::before {
-content: '';
-position: absolute;
-left: 0;
-top: calc(1.1rem + 0.55rem);
-width: 14px;
-height: 1px;
-background: var(--accent);
-}
-
-.info-list li:first-child::before {
-top: 0.55rem;
-}
-
-.info-list h4 {
-font-size: 0.98rem;
-color: #1a2530;
-margin-bottom: 0.35rem;
-}
-
-.info-list p {
-font-size: 0.9rem;
-color: var(--text-light);
-margin-bottom: 0;
-}
-
-/* Simple two-column label grid used for "Our Expertise" sectors */
-.expertise-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-column-gap: 40px;
-margin-top: 1.75rem;
-}
-
-.expertise-grid .expertise-item {
-position: relative;
-padding: 0.9rem 0 0.9rem 26px;
-border-bottom: 1px solid var(--border);
-font-size: 0.93rem;
-color: var(--text);
-}
-
-.expertise-grid .expertise-item::before {
-content: '';
-position: absolute;
-left: 0;
-top: calc(0.9rem + 0.5rem);
-width: 14px;
-height: 1px;
-background: var(--accent);
-}
-
-.expertise-grid .expertise-item:nth-last-child(-n+2) {
-border-bottom: none;
-}
-
-/* "Where We Work" — single column section on white background */
-.where-section {
-padding: 90px 0;
-}
-
-.where-section .dash {
-width: 40px;
-height: 1px;
-background: var(--border-strong);
-margin-bottom: 1.25rem;
-}
-
-.where-section h2 {
-font-size: clamp(1.5rem, 2.6vw, 1.9rem);
-color: #1a2530;
-margin-bottom: 1.1rem;
-}
-
-.where-section p {
-max-width: 760px;
-color: var(--text-light);
-font-size: 0.97rem;
-}
-
 /* MOBILE */
 @media (max-width: 900px) {
 .services-grid {
 grid-template-columns: repeat(2, 1fr);
-}
-}
-
-@media (max-width: 860px) {
-.service-row {
-grid-template-columns: 1fr;
-}
-.service-scope {
-border-left: none;
-border-top: 1px solid var(--border);
-}
-.two-col-grid,
-.expertise-grid {
-grid-template-columns: 1fr;
-gap: 40px;
 }
 }
 
