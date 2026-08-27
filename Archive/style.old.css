@@ -222,9 +222,13 @@ a {
     color: var(--primary);
 }
 
-/* Ensure card headings stay visible even inside dark sections like why-section */
+/* Ensure card content stays visible even inside dark sections like why-section */
 .why-section .card h3 {
     color: var(--primary);
+}
+
+.why-section .card p {
+    color: var(--text-light);
 }
 
 /* SPLIT FEATURE */
