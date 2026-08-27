@@ -107,6 +107,7 @@ padding: 14px 28px;
 border-radius: 4px;
 font-weight: 600;
 transition: all 0.2s ease;
+margin-left: 24px;
 }
 
 .cta-btn:hover {
