@@ -3,30 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact CLM Consulting</title>
+    <title>Contact Us | CLM Consulting</title>
+    <meta name="description" content="Get in touch with CLM Consulting for independent building consultancy, quantity surveying and project management advice across Gloucestershire and the South West.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="site-header">
     <div class="container nav-container">
         <a href="index.html" class="logo">
-            <img src="clm.logo.png" alt="clm.logo" class="clm.logologo">
+            <img src="Assets/clm-logo.png" alt="CLM Consulting Logo" class="logo-img">
         </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="contact.html" class="cta-btn">Get in Touch</a>
     </div>
 </header>
-
-<section class="hero">
+<section class="section" style="padding-top: 160px;">
     <div class="container">
-        <h1>Get In Touch</h1>
-
-        <p>
-            We welcome enquiries from property owners, developers,
-            businesses and professional advisors.
+        <h1 style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;">Get In Touch</h1>
+        <div class="gold-line"></div>
+        <p class="intro-text">
+            We welcome enquiries from property owners, developers, businesses
+            and professional advisors. Tell us a little about your project and
+            we'll come back to you promptly.
         </p>
     </div>
 </section>
+<section class="section section-alt">
+    <div class="container">
+        <div class="about-split">
+            <div class="about-left">
+                <h2 style="font-size: 2rem;">Send Us a Message</h2>
+                <div class="gold-line"></div>
+                <form id="enquiryForm" class="contact-form" action="https://formspree.io/f/mqpzloly" method="POST">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="phone">Phone Number (optional)</label>
+                    <input type="tel" id="phone" name="phone">
+                    <label for="message">Tell us about your project</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                    <button type="submit" class="cta-btn" id="formSubmitBtn">Send Enquiry</button>
+                    <p class="form-status" id="formStatus" role="status" aria-live="polite" style="margin-top: 1rem;"></p>
+                </form>
+            </div>
+            <div class="about-right">
+                <div class="feature-row">
+                    <h4>Address</h4>
+                    <p>Gloucestershire, United Kingdom</p>
+                </div>
+                <div class="feature-row">
+                    <h4>Email</h4>
+                    <p><a href="mailto:info@clmconsulting.co.uk">info@clmconsulting.co.uk</a></p>
+                </div>
+                <div class="feature-row">
+                    <h4>Response Time</h4>
+                    <p>Enquiries are typically answered within one business day.</p>
+                </div>
+                <div class="feature-row">
+                    <h4>Coverage Area</h4>
+                    <p>Serving Gloucestershire, the South West and wider UK.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer-gold-line"></div>
+    <div class="container footer-grid">
+        <div>
+            <img src="Assets/clm-logo.png" alt="CLM Consulting Logo" class="footer-logo">
+            <p>
+                Independent building consultancy and quantity surveying services
+                across Gloucestershire and the wider South West.
+            </p>
+            <small>Gloucestershire, United Kingdom</small>
+        </div>
+        <div>
+            <h4>Services</h4>
+            <ul>
+                <li>Quantity Surveying</li>
+                <li>Project Management</li>
+                <li>Building Consultancy</li>
+                <li>Contract Administration</li>
+                <li>Dilapidations</li>
+                <li>Condition Surveys</li>
+            </ul>
+        </div>
+        <div>
+            <h4>Company</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Contact</h4>
+            <p>Gloucestershire<br>United Kingdom</p>
+            <p>
+                <a href="mailto:info@clmconsulting.co.uk">
+                    info@clmconsulting.co.uk
+                </a>
+            </p>
+            <a href="contact.html">
+                Enquire Now
+            </a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2026 CLM Consulting. All rights reserved.
+    </div>
+</footer>
 
-<section class="section">
+<script>
+  // Enquiry form — submits to Formspree without leaving the page.
+  // Same Formspree form already used on the main site, so all enquiries
+  // land in the one inbox: https://formspree.io/f/mqpzloly
+  const FORM_ENDPOINT = 'https://formspree.io/f/mqpzloly';
 
-    <
+  const enquiryForm = document.getElementById('enquiryForm');
+  const formStatus = document.getElementById('formStatus');
+  const submitBtn = document.getElementById('formSubmitBtn');
+
+  enquiryForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    formStatus.textContent = '';
+    formStatus.className = 'form-status';
+
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(enquiryForm)
+      });
+
+      if (response.ok) {
+        formStatus.textContent = "Thanks — your enquiry has been sent. We'll be in touch within one business day.";
+        formStatus.style.color = '#3E7A4F';
+        enquiryForm.reset();
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (err) {
+      formStatus.textContent = 'Something went wrong sending that. Please email info@clmconsulting.co.uk directly.';
+      formStatus.style.color = '#A8432E';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Enquiry';
+    }
+  });
+</script>
+
+</body>
+</html>
