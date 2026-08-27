@@ -14,18 +14,14 @@
             <img src="Assets/clm-logo.png" alt="CLM Consulting Logo" class="logo-img">
         </a>
         <nav>
-            <ul class="nav-links" id="navList">
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html" class="active">Services</a></li>
                 <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <a href="contact.html" class="cta-btn">Get in Touch</a>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navList">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
     </div>
 </header>
 
@@ -287,23 +283,5 @@
         &copy; 2026 CLM Consulting. All rights reserved.
     </div>
 </footer>
-
-<script>
-  // Mobile nav toggle
-  const navToggle = document.getElementById('navToggle');
-  const navList = document.getElementById('navList');
-  navToggle.addEventListener('click', () => {
-    const isOpen = navList.classList.toggle('open');
-    navToggle.classList.toggle('open', isOpen);
-    navToggle.setAttribute('aria-expanded', isOpen);
-  });
-  navList.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navList.classList.remove('open');
-      navToggle.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-</script>
 </body>
 </html>
