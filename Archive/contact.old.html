@@ -18,23 +18,26 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
         <a href="contact.html" class="cta-btn">Get in Touch</a>
     </div>
 </header>
-<section class="section" style="padding-top: 160px;">
+
+<!-- Solid blue page header — matches Services and About pages -->
+<section class="contact-hero">
     <div class="container">
-        <h1 style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;">Get In Touch</h1>
-        <div class="gold-line"></div>
-        <p class="intro-text">
+        <div class="dash"></div>
+        <h1>Get In Touch</h1>
+        <p>
             We welcome enquiries from property owners, developers, businesses
             and professional advisors. Tell us a little about your project and
             we'll come back to you promptly.
         </p>
     </div>
 </section>
+
 <section class="section section-alt">
     <div class="container">
         <div class="about-split">
@@ -75,6 +78,7 @@
         </div>
     </div>
 </section>
+
 <footer class="footer">
     <div class="footer-gold-line"></div>
     <div class="container footer-grid">
@@ -129,42 +133,36 @@
   // Same Formspree form already used on the main site, so all enquiries
   // land in the one inbox: https://formspree.io/f/mqpzloly
   const FORM_ENDPOINT = 'https://formspree.io/f/mqpzloly';
-
   const enquiryForm = document.getElementById('enquiryForm');
   const formStatus = document.getElementById('formStatus');
   const submitBtn = document.getElementById('formSubmitBtn');
-
   enquiryForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending...';
     formStatus.textContent = '';
     formStatus.className = 'form-status';
-
     try {
       const response = await fetch(FORM_ENDPOINT, {
         method: 'POST',
         headers: { 'Accept': 'application/json' },
         body: new FormData(enquiryForm)
       });
-
       if (response.ok) {
         formStatus.textContent = "Thanks — your enquiry has been sent. We'll be in touch within one business day.";
-        formStatus.style.color = '#3E7A4F';
+        formStatus.classList.add('ok');
         enquiryForm.reset();
       } else {
         throw new Error('Submission failed');
       }
     } catch (err) {
       formStatus.textContent = 'Something went wrong sending that. Please email info@clmconsulting.co.uk directly.';
-      formStatus.style.color = '#A8432E';
+      formStatus.classList.add('err');
     } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = 'Send Enquiry';
     }
   });
 </script>
-
 </body>
 </html>
