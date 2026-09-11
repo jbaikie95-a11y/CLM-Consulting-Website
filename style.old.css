@@ -621,8 +621,7 @@ a {
   color: rgba(255,255,255,0.88);
   font-size: 1.05rem;
 }
-/* Two-column info sections (Who We Are / How We Work,
-   Our Expertise / Professional Standards) */
+/* Two-column info sections (Who We Are / How We Work) */
 .about-split-section {
   padding: 90px 0;
 }
@@ -654,7 +653,7 @@ a {
 .two-col-grid > div > p:last-of-type {
   margin-bottom: 0;
 }
-/* Divider list used for "How We Work" and "Professional Standards"
+/* Divider list used for "How We Work"
    — heading + short description per row */
 .info-list {
   list-style: none;
@@ -694,42 +693,56 @@ a {
   color: var(--text-light);
   margin-bottom: 0;
 }
-/* Two-column heading + description grid used for "Our Expertise" sectors
-   — mirrors the .info-list treatment used in "Professional Standards" */
+/* Full-width "Our Expertise" section on the About page
+   (Professional Standards now lives on the Home page only) */
+.expertise-section {
+  max-width: 980px;
+}
+.expertise-section p.expertise-intro {
+  color: var(--text-light);
+  font-size: 1rem;
+  max-width: 800px;
+  margin-bottom: 0.5rem;
+}
+/* Spacious 2x2 card-style grid — heading + description per item,
+   with generous gaps now that the section spans the full width */
 .expertise-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 40px;
-  margin-top: 1.75rem;
+  column-gap: 70px;
+  row-gap: 2.75rem;
+  margin-top: 3rem;
 }
 .expertise-grid .expertise-item {
   position: relative;
-  padding: 0.9rem 0 0.9rem 26px;
+  padding: 1.4rem 0 1.4rem 30px;
   border-bottom: 1px solid var(--border);
 }
 .expertise-grid .expertise-item::before {
   content: '';
   position: absolute;
   left: 0;
-  top: calc(0.9rem + 0.55rem);
-  width: 14px;
+  top: calc(1.4rem + 0.6rem);
+  width: 16px;
   height: 1px;
   background: var(--accent);
 }
 .expertise-grid .expertise-item:nth-last-child(-n+2) {
   border-bottom: none;
+  padding-bottom: 0;
 }
 .expertise-grid .expertise-item h4 {
-  font-size: 0.98rem;
+  font-size: 1.05rem;
   color: #1a2530;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.5rem;
   line-height: 1.4;
 }
 .expertise-grid .expertise-item p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--text-light);
   margin-bottom: 0;
-  line-height: 1.6;
+  line-height: 1.7;
+  max-width: 40ch;
 }
 /* "Where We Work" — single column section on white background */
 .where-section {
@@ -827,6 +840,14 @@ a {
   .expertise-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+  .expertise-grid .expertise-item:nth-last-child(-n+2) {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.4rem;
+  }
+  .expertise-grid .expertise-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
   }
 }
 @media (max-width: 768px) {
