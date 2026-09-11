@@ -3,11 +3,11 @@
    CLM CONSULTING STYLES
    ====================== */
 :root {
-  --primary: #14224B;
-  --primary-dark: #111D40;
-  --accent: #D2A346;
-  --accent-dark: #B28B3C;
-  --text: #14224B;
+  --primary: #5d7b92;
+  --primary-dark: #4f697d;
+  --accent: #c6b380;
+  --accent-dark: #b7a16a;
+  --text: #222;
   --text-light: #666;
   --background: #ffffff;
   --background-alt: #f4f5f6;
@@ -87,7 +87,7 @@ a {
   color: var(--accent);
 }
 .cta-btn {
-  background: #D2A346;
+  background: #c7b07c;
   color: white;
   padding: 14px 28px;
   border-radius: 4px;
@@ -208,7 +208,7 @@ a {
   font-size: 1.3rem;
 }
 .services-grid .card h3 {
-  color: #14224B;
+  color: #1a2530;
 }
 .card p {
   color: var(--text-light);
@@ -238,7 +238,7 @@ a {
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #14224B;
+  color: #111;
 }
 .feature-row h4::before {
   content: "";
@@ -270,7 +270,7 @@ a {
   display: inline-block;
   margin-top: 20px;
   margin-left: 0;
-  background: #D2A346;
+  background: #c7b07c;
   color: white;
   padding: 14px 30px;
   text-decoration: none;
@@ -342,7 +342,7 @@ a {
 .cta-section a {
   display: inline-block;
   background: var(--accent);
-  color: #14224B;
+  color: #1a2530;
   padding: 1rem 1.75rem;
   border-radius: 6px;
   font-weight: 600;
@@ -486,7 +486,7 @@ a {
 }
 .services-intro h2 {
   font-size: clamp(1.5rem, 2.6vw, 1.9rem);
-  color: #14224B;
+  color: #1a2530;
   margin-bottom: 0.9rem;
   max-width: 720px;
 }
@@ -518,7 +518,7 @@ a {
 }
 .service-info h3 {
   font-size: 1.4rem;
-  color: #14224B;
+  color: #1a2530;
   margin-bottom: 0.4rem;
 }
 .service-subtitle {
@@ -642,7 +642,7 @@ a {
 }
 .two-col-grid h2 {
   font-size: clamp(1.5rem, 2.6vw, 1.9rem);
-  color: #14224B;
+  color: #1a2530;
   margin-bottom: 1.1rem;
 }
 .two-col-grid > div > p {
@@ -685,7 +685,7 @@ a {
 }
 .info-list h4 {
   font-size: 0.98rem;
-  color: #14224B;
+  color: #1a2530;
   margin-bottom: 0.35rem;
 }
 .info-list p {
@@ -728,7 +728,7 @@ a {
 }
 .expertise-grid .expertise-item.card h4 {
   font-size: 1.1rem;
-  color: #14224B;
+  color: #1a2530;
   margin-bottom: 0.75rem;
   line-height: 1.4;
 }
@@ -750,7 +750,7 @@ a {
 }
 .where-section h2 {
   font-size: clamp(1.5rem, 2.6vw, 1.9rem);
-  color: #14224B;
+  color: #1a2530;
   margin-bottom: 1.1rem;
 }
 .where-section p {
