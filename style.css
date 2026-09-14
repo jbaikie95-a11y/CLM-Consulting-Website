@@ -5,8 +5,8 @@
 :root {
   --primary: #14224B;
   --primary-dark: #111D40;
-  --accent: #D2A346;
-  --accent-dark: #B28B3C;
+  --accent: #c6b380;
+  --accent-dark: #b7a16a;
   --text: #14224B;
   --text-light: #666;
   --background: #ffffff;
@@ -87,7 +87,7 @@ a {
   color: var(--accent);
 }
 .cta-btn {
-  background: #D2A346;
+  background: #c6b380;
   color: white;
   padding: 14px 28px;
   border-radius: 4px;
@@ -270,7 +270,7 @@ a {
   display: inline-block;
   margin-top: 20px;
   margin-left: 0;
-  background: #D2A346;
+  background: #c6b380;
   color: white;
   padding: 14px 30px;
   text-decoration: none;
