@@ -1,3 +1,4 @@
+
 /* ======================
    CLM CONSULTING STYLES
    ====================== */
@@ -141,31 +142,6 @@ a {
   padding: 1rem 1.8rem;
   border-radius: 6px;
   font-weight: 600;
-}
-/* SECTIONS */
-.section {
-  padding: 120px 0 90px;
-}
-.section-alt {
-  background: var(--background-alt);
-}
-.section h2 {
-  font-size: 2.3rem;
-  margin-bottom: 1rem;
-  color: var(--primary);
-}
-.gold-line {
-  width: 80px;
-  height: 4px;
-  background: var(--accent);
-  margin-bottom: 2rem;
-}
-.section p {
-  margin-bottom: 1rem;
-}
-.intro-text {
-  max-width: 800px;
-  margin-bottom: 2rem;
 }
 /* SERVICE CARDS (Home page "Our Services" section — numbered white cards) */
 .services-grid {
@@ -455,19 +431,11 @@ a {
   color: #A8432E;
 }
 /* ======================================================
-   SERVICES PAGE — expanded panels + photo-banner header
+   SERVICES PAGE — expanded panels + solid-colour page header
    ====================================================== */
-/* Banner header on the Services page — now uses a photo
-   background (Assets/services.png) instead of solid blue */
+/* Solid blue header replacing the hero photo on the Services page */
 .services-hero {
-  background-image:
-    linear-gradient(
-      rgba(20,34,75,0.75),
-      rgba(20,34,75,0.75)
-    ),
-    url('Assets/services.png');
-  background-size: cover;
-  background-position: center;
+  background: var(--primary);
   color: white;
   padding: 150px 0 70px;
 }
@@ -610,20 +578,12 @@ a {
   margin-left: 0;
 }
 /* ======================================================
-   ABOUT PAGE — photo-banner header + two-column
+   ABOUT PAGE — blue header bar (no hero photo) + two-column
    info sections, matching the Services page treatment
    ====================================================== */
-/* Banner header on the About page — now uses a photo
-   background (Assets/about.png) instead of solid blue */
+/* Solid blue header replacing the hero photo on the About page */
 .about-hero {
-  background-image:
-    linear-gradient(
-      rgba(20,34,75,0.75),
-      rgba(20,34,75,0.75)
-    ),
-    url('Assets/about.png');
-  background-size: cover;
-  background-position: center;
+  background: var(--primary);
   color: white;
   padding: 150px 0 70px;
 }
