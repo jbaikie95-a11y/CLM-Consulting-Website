@@ -3,11 +3,11 @@
    CLM CONSULTING STYLES
    ====================== */
 :root {
-  --primary: #5d7b92;
-  --primary-dark: #4f697d;
+  --primary: #14224B;
+  --primary-dark: #111D40;
   --accent: #c6b380;
   --accent-dark: #b7a16a;
-  --text: #222;
+  --text: #14224B;
   --text-light: #666;
   --background: #ffffff;
   --background-alt: #f4f5f6;
@@ -87,7 +87,7 @@ a {
   color: var(--accent);
 }
 .cta-btn {
-  background: #c7b07c;
+  background: #c6b380;
   color: white;
   padding: 14px 28px;
   border-radius: 4px;
@@ -143,31 +143,6 @@ a {
   border-radius: 6px;
   font-weight: 600;
 }
-/* SECTIONS */
-.section {
-  padding: 120px 0 90px;
-}
-.section-alt {
-  background: var(--background-alt);
-}
-.section h2 {
-  font-size: 2.3rem;
-  margin-bottom: 1rem;
-  color: var(--primary);
-}
-.gold-line {
-  width: 80px;
-  height: 4px;
-  background: var(--accent);
-  margin-bottom: 2rem;
-}
-.section p {
-  margin-bottom: 1rem;
-}
-.intro-text {
-  max-width: 800px;
-  margin-bottom: 2rem;
-}
 /* SERVICE CARDS (Home page "Our Services" section — numbered white cards) */
 .services-grid {
   display: grid;
@@ -208,7 +183,7 @@ a {
   font-size: 1.3rem;
 }
 .services-grid .card h3 {
-  color: #1a2530;
+  color: #14224B;
 }
 .card p {
   color: var(--text-light);
@@ -238,7 +213,7 @@ a {
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #111;
+  color: #14224B;
 }
 .feature-row h4::before {
   content: "";
@@ -270,7 +245,7 @@ a {
   display: inline-block;
   margin-top: 20px;
   margin-left: 0;
-  background: #c7b07c;
+  background: #c6b380;
   color: white;
   padding: 14px 30px;
   text-decoration: none;
@@ -342,7 +317,7 @@ a {
 .cta-section a {
   display: inline-block;
   background: var(--accent);
-  color: #1a2530;
+  color: #14224B;
   padding: 1rem 1.75rem;
   border-radius: 6px;
   font-weight: 600;
@@ -351,15 +326,16 @@ a {
 .cta-section a:hover {
   background: var(--accent-dark);
 }
-/* FOOTER */
+/* FOOTER — white background with navy text/logo pop */
 .footer {
-  background: var(--primary);
-  color: white;
+  background: #ffffff;
+  color: var(--primary);
+  border-top: 1px solid var(--border);
 }
 .footer-gold-line {
   height: 2px;
   background: var(--accent);
-  opacity: 0.7;
+  opacity: 1;
 }
 .footer-logo {
   height: 70px;
@@ -374,25 +350,31 @@ a {
 }
 .footer h4 {
   margin-bottom: 1rem;
-  color: var(--accent);
+  color: var(--primary);
 }
 .footer ul {
   list-style: none;
 }
 .footer ul li {
   margin-bottom: 0.6rem;
+  color: var(--primary);
+}
+.footer p,
+.footer small {
+  color: var(--primary);
 }
 .footer a {
-  color: rgba(255,255,255,0.85);
+  color: var(--primary);
 }
 .footer a:hover {
-  color: var(--accent);
+  color: var(--accent-dark);
 }
 .footer-bottom {
   text-align: center;
   padding: 1.5rem;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid var(--border);
   font-size: 0.85rem;
+  color: var(--primary);
   opacity: 0.7;
 }
 /* UTILITY */
@@ -486,7 +468,7 @@ a {
 }
 .services-intro h2 {
   font-size: clamp(1.5rem, 2.6vw, 1.9rem);
-  color: #1a2530;
+  color: #14224B;
   margin-bottom: 0.9rem;
   max-width: 720px;
 }
@@ -518,7 +500,7 @@ a {
 }
 .service-info h3 {
   font-size: 1.4rem;
-  color: #1a2530;
+  color: #14224B;
   margin-bottom: 0.4rem;
 }
 .service-subtitle {
@@ -642,7 +624,7 @@ a {
 }
 .two-col-grid h2 {
   font-size: clamp(1.5rem, 2.6vw, 1.9rem);
-  color: #1a2530;
+  color: #14224B;
   margin-bottom: 1.1rem;
 }
 .two-col-grid > div > p {
@@ -685,7 +667,7 @@ a {
 }
 .info-list h4 {
   font-size: 0.98rem;
-  color: #1a2530;
+  color: #14224B;
   margin-bottom: 0.35rem;
 }
 .info-list p {
@@ -728,7 +710,7 @@ a {
 }
 .expertise-grid .expertise-item.card h4 {
   font-size: 1.1rem;
-  color: #1a2530;
+  color: #14224B;
   margin-bottom: 0.75rem;
   line-height: 1.4;
 }
@@ -750,7 +732,7 @@ a {
 }
 .where-section h2 {
   font-size: clamp(1.5rem, 2.6vw, 1.9rem);
-  color: #1a2530;
+  color: #14224B;
   margin-bottom: 1.1rem;
 }
 .where-section p {
